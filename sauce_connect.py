@@ -933,7 +933,7 @@ def run(options, dependency_versions=None,
 
 
 def main():
-    if map(int, platform.python_version_tuple ()) < [2, 5]:
+    if map(int, platform.python_version_tuple ()[:2]) < [2, 5]:
         print "%s requires Python 2.5 (2006) or newer." % PRODUCT_NAME
         raise SystemExit(1)
 
